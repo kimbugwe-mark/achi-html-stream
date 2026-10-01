@@ -1,0 +1,1 @@
+type TemplateValues=string|number|Error|ReadableStream|Request|Response|UnSafeHTML|undefined|Generator|Array<TemplateValues>

@@ -1,0 +1,90 @@
+{
+  "name": "achi-html-stream",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "An HTML streaming library for multi-page progressive web apps that renders HTML in service workers and also works with Node.js and other JavaScript runtimes",
+  "author": {
+    "name": "Kimbugwe Mark",
+    "email": "markkimbugwe@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/kimbugwe-mark/achi-html-stream#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimbugwe-mark/achi-html-stream.git"
+  },
+  "keywords": [
+    "html templating",
+    "tagged template",
+    "template literals",
+    "server-side rendering",
+    "ssr",
+    "html rendering",
+    "streaming html",
+    "async rendering",
+    "xss protection",
+    "service worker rendering",
+    "html escaping",
+    "performance",
+    "html"
+  ],
+  "bugs": {
+    "url": "https://github.com/kimbugwe-mark/achi-html-stream/issues"
+  },
+  "types": "./dist/node/index.d.mts",
+  "unpkg": "./dist/browser/index.iife.js",
+  "jsdelivr": "./dist/browser/index.iife.js",
+  "exports": {
+    ".": {
+      "types": "./dist/node/index.d.mts",
+      "node": {
+        "import": "./dist/node/index.mjs",
+        "require": "./dist/node/index.cjs",
+        "types": "./dist/node/index.d.mts"
+      },
+      "bun": {
+        "import": "./dist/browser/index.mjs",
+        "types": "./dist/browser/index.d.mts"
+      },
+      "deno": {
+        "import": "./dist/browser/index.mjs",
+        "types": "./dist/browser/index.d.mts"
+      },
+      "browser": {
+        "import": "./dist/browser/index.mjs",
+        "types": "./dist/browser/index.d.mts"
+      },
+      "default": "./dist/browser/index.mjs"
+    },
+    "./node": {
+      "import": "./dist/node/index.mjs",
+      "require": "./dist/node/index.cjs",
+      "types": "./dist/node/index.d.mts"
+    },
+    "./browser": {
+      "import": "./dist/browser/index.mjs",
+      "types": "./dist/browser/index.d.mts"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp",
+    "prepublishOnly": "pnpm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "bumpp": "^11.1.0",
+    "es-check": "^9.7.1",
+    "es-check-min": "^1.0.11",
+    "tsdown": "^0.22.5",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  }
+}
