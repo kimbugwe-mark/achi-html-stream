@@ -35,8 +35,6 @@ Pre-bundled builds expose `window.achiHTML`. ```html
 
 Pin a version in production, for example `https://unpkg.com/achi-html-stream@1.2.3`.
 
-````
-
 ## Quick start
 
 ### Service worker
@@ -44,12 +42,12 @@ Pin a version in production, for example `https://unpkg.com/achi-html-stream@1.2
 Return a streaming `Response` from a `fetch` handler:
 
 ```ts
-import { html, render } from 'achi-html-stream'
+import { html, render } from "achi-html-stream";
 
-self.addEventListener('fetch', (event) => {
-  const url = new URL(event.request.url)
+self.addEventListener("fetch", (event) => {
+  const url = new URL(event.request.url);
 
-  if (url.pathname === '/') {
+  if (url.pathname === "/") {
     event.respondWith(
       render(
         html`<!doctype html>
@@ -59,15 +57,15 @@ self.addEventListener('fetch', (event) => {
               <title>PWA Streaming</title>
             </head>
             <body>
-              <h1>Hello, ${'world'}!</h1>
+              <h1>Hello, ${"world"}!</h1>
             </body>
           </html>`,
-        { 'Cache-Control': 'no-cache' }
-      )
-    )
+        { "Cache-Control": "no-cache" },
+      ),
+    );
   }
-})
-````
+});
+```
 
 `render()` sets `Content-Type: text/html; charset=utf-8` by default and streams the output through a native `Response`.
 
@@ -78,6 +76,7 @@ The Node entry point pipes the rendered stream into a `http.ServerResponse`:
 ```ts
 import { createServer } from "node:http";
 import { html, render } from "achi-html-stream";
+//require("achi-html-stream")
 
 createServer((req, res) => {
   render(
