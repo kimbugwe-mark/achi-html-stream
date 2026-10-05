@@ -7,6 +7,8 @@
 
 It uses tagged template literals with automatic XSS escaping, async values, readable-stream embedding/piping and response, with zero runtime dependencies.
 
+For the full up-to-date documentation, please visit our [GitHub Repository](https://github.com/kimbugwe-mark/achi-html-stream#readme).
+
 ## Features
 
 - **Streaming by design**: HTML is flushed progressively as data resolves, without buffering whole pages.
