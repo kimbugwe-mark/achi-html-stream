@@ -1,7 +1,7 @@
 {
   "name": "achi-html-stream",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An HTML streaming library for multi-page progressive web apps that renders HTML in service workers and also works with Node.js and other JavaScript runtimes",
   "author": {
     "name": "Kimbugwe Mark",

@@ -20,7 +20,7 @@ function render(
   statusText = "OK",
 ): Response {
   let responseHeaders = Object.assign(
-    { "Content-Type": "text/html; charset=utf-8" },
+    { "Content-Type": "text/html; charset=utf-8","X-Accel-Buffering": "no" },
     headers,
   );
   return new Response(

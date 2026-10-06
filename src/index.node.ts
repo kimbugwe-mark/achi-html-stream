@@ -26,7 +26,7 @@ function render(
   response.writeHead(
     status,
     statusText,
-    Object.assign({ "Content-Type": "text/html; charset=utf-8" }, headers),
+    Object.assign({ "Content-Type": "text/html; charset=utf-8","X-Accel-Buffering": "no" }, headers),
   );
   readable.pipe(response);
 }
